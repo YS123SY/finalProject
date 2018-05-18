@@ -8,16 +8,16 @@ class NavBar extends React.Component {
         return (
     
  <div className="navbar-main">
-<ul>
-<Link to={`$#`}>
+
+<div className='post'><Link to={`$#`}>
     <input type='button' value='Post an article'/>
-     </Link>
-  <li> <h1>G M C STUDENTS BLOG</h1></li>
-  <li> <i className="fa fa-home"></i></li>
-  <Link to={`$#`}>
-    <input type='button' value='sign in'/>
-     </Link>
-</ul>
+     </Link></div>
+  <div> <h1 className='big-title'>G M C STUDENTS BLOG</h1></div>
+  <div className='post'> <input type='spaceholder' value='Search'/> </div>
+  <div className='post'><Link to={`$#`}>
+   <input type='button' value='Sign in'/>
+     </Link></div>
+
 
  </div>
 

@@ -2,11 +2,10 @@
 .component-main {
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 50px;
     background-color: rgba(211,211,211,0.6);
-     width: 550px;
-     margin-bottom: 100px;
-     margin-left: 150px;
+    width: 650px;
+    
   }
     .category {
     text-align: right;
@@ -32,7 +31,7 @@
   .title-comp h5 {
     color:black;
     font-family: fantasy;
-    font-size: 20px;
+    font-size: 35px;
   }
   .date p {
     color:black;

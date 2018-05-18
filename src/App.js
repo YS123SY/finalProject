@@ -46,6 +46,7 @@ class App extends Component {
 
   render() {
     return (
+      <Router>
       <div className="App">
       <NavBar/>
       <div className='article-list'>
@@ -53,6 +54,7 @@ class App extends Component {
       </div>
     
       </div>
+      </Router>
     );
   }
 }
