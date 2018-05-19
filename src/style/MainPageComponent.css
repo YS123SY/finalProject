@@ -15,7 +15,10 @@
   .category button{
     color:azure;
     background-color: blueviolet;
-    border: none
+    border: none;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-size: 20px;
   }
 
   .image-comp {
@@ -25,8 +28,8 @@
   }
 
   .image-comp img {
-      width:70%;
-      height: 80%;
+    width: 450px;
+    height: 400px;
   }
   .title-comp h5 {
     color:black;
