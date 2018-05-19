@@ -1,26 +1,27 @@
-*{
-  box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
 body {
-  background-image: url("gomycode.jpg");
+  background-image: url("background.jpg");
   background-size: 100% 100%;
-  }
+  background-repeat: no-repeat;
+}
 .App {
   text-align: center;
 }
-.article-list{
+.article-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 30px
+  margin-top: 30px;
 }
-.articale{
-  margin :10px
+.articale {
+  margin: 10px;
 }
-footer{
+footer {
   height: 50px;
   background-color: rgba(115, 115, 200, 0.4);
   color: azure;
-  font-size: 60px
+  font-size: 60px;
 }

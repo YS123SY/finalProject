@@ -1,20 +1,21 @@
-import React from 'react'
-import {Route} from 'react-router-dom'
-import App from './App';
-import HomePage from "./containers/HomePage"
-import Login from "./containers/Login"
-import PostArticle from "./containers/PostArticle"
-import Article from "./containers/Article"
+import React from "react";
+import { Route } from "react-router-dom";
+import App from "./App";
+import HomePage from "./containers/HomePage";
+import Login from "./containers/Login";
+import PostArticle from "./containers/PostArticle";
+import Article from "./containers/Article";
 
-class Routes extends React.Component  {
-  render ( ) {
-    return <div>
-    <Route exact path ='/' component={HomePage} />
-    <Route  path ='/signIn' component={Login} />   
-    <Route  path ='/post' component={PostArticle} />
-    <Route  path ='/article' component={Article} />
-
-    </div>
+class Routes extends React.Component {
+  render() {
+    return (
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/signIn" component={Login} />
+        <Route path="/post" component={PostArticle} />
+        <Route path="/article" component={Article} />
+      </div>
+    );
   }
 }
-export default Routes
+export default Routes;
