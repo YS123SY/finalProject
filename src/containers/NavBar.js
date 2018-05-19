@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../style/NavBar.css";
 
@@ -19,7 +19,7 @@ class NavBar extends React.Component {
           <input type="spaceholder" value="" />
         </div>
         <div className="post">
-          <Link to="/signIn">
+          <Link to="/login">
             <input type="button" value="Sign in" />
           </Link>
         </div>
