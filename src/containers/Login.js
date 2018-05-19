@@ -8,17 +8,17 @@ class Login extends React.Component {
     return (
       <div className="login-main">
         <div className="login-div">
-          <span>E-mail</span>
-          <div className="input-div">
-            <input type="holderspace" value="" />
+          <span className="spanDiv">E-mail</span>
+          <div>
+            <input className="input-div" type="holderspace" value="" />
           </div>
 
           <span>Password</span>
-          <div className="input-div">
-            <input type="holderspace" value="" />
+          <div>
+            <input className="input-div" type="holderspace" value="" />
           </div>
-          <div className="submit-div">
-            <input type="button" value="Submit" />
+          <div>
+            <input className="submit-div" type="button" value="Submit" />
           </div>
         </div>
       </div>
