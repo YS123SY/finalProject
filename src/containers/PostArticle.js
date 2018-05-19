@@ -13,15 +13,15 @@ class PostArticale extends React.Component {
     };
   }
   onChangeTitle = event => {
-    const name = event.target.value;
+    const title = event.target.value;
     this.setState({
-      name
+        title
     });
   };
   onChangeCategory = event => {
-    const email = event.target.value;
+    const category = event.target.value;
     this.setState({
-      email
+        category
     });
   };
   onChangeImage = event => {
