@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 import "../style/SignUp.css";
 
@@ -9,19 +10,22 @@ class PostArticale extends React.Component {
       title: "",
       category: "",
       Image: "",
-      content: "",
+      content: ""
     };
   }
+  addArticle = value => {
+    axios.post("/post", { ...value });
+  };
   onChangeTitle = event => {
-    const name = event.target.value;
+    const title = event.target.value;
     this.setState({
-      name
+      title
     });
   };
   onChangeCategory = event => {
-    const email = event.target.value;
+    const category = event.target.value;
     this.setState({
-      email
+      category
     });
   };
   onChangeImage = event => {
@@ -77,8 +81,9 @@ class PostArticale extends React.Component {
           <div className="input-div">
             <span className="span-signIn">Artical Content</span>
             <textarea
-            className='inputText'
-              rows="10" cols="20"
+              className="inputText"
+              rows="10"
+              cols="20"
               value={this.state.content}
               placeholder="Content"
               onChange={this.onChangeContent}
@@ -86,7 +91,12 @@ class PostArticale extends React.Component {
           </div>
 
           <div className="submit-div">
-            <button className="btn-create">Submit</button>
+            <button
+              className="btn-create"
+              onClick={() => this.addArticle(this.state)}
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
