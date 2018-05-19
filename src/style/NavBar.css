@@ -1,24 +1,22 @@
 .navbar-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 255, 0.4);
-    height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 255, 0.4);
+  height: 70px;
 }
 .big-title {
-  
-    color: aliceblue;
- 
+  color: aliceblue;
 }
 .big-title h1 {
-    margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .post {
-    margin-top: 7px;
-    margin-bottom: 5px;
+  margin-top: 7px;
+  margin-bottom: 5px;
 }
 .post input {
-    height: 35px;
-    margin-top: 10px;
+  height: 35px;
+  margin-top: 10px;
 }

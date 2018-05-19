@@ -31,7 +31,7 @@ class NavBar extends React.Component {
           <input type="spaceholder" value={this.state.search} onSearch={this.onSearch}/>
         </div>
         <div className="post">
-          <Link to="/signIn">
+          <Link to="/login">
             <input type="button" value="Sign in" />
           </Link>
         </div>
