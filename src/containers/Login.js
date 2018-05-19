@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 import "../style/Login.css";
 
@@ -19,6 +20,7 @@ class Login extends React.Component {
           </div>
           <div className="submit-div">
             <input type="button" value="Submit" />
+           <Link to="/signUp"> <span>create one</span></Link>
           </div>
         </div>
       </div>
