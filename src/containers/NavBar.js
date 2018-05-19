@@ -28,7 +28,7 @@ class NavBar extends React.Component {
           <h1 className="big-title">G M C STUDENTS BLOG</h1>
         </div>
         <div className="post">
-          <input type="spaceholder" value={this.state.search} onSearch={this.onSearch}/>
+          <input type="spaceholder" value={this.state.search} onChange={this.onSearch}/>
         </div>
         <div className="post">
           <Link to="/login">

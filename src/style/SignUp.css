@@ -39,6 +39,7 @@
     margin-top: 30px;
   }
   .submit-div{
+      margin-Top:20px;
       width: 70%;
       display: flex;
       justify-content: flex-start
@@ -49,4 +50,9 @@
       border:solid 1px rgb(59, 59, 59);
       padding: 5px 20px
   }
-  
+  .inputText {
+    max-height: 75px;
+    min-height: 38px;
+    resize: none;
+    padding: 9px;    font-size: 15px
+  }
