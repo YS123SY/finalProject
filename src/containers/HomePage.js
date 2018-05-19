@@ -12,7 +12,6 @@ class HomePage extends Component {
   render() {
     return (
       <div className="App">
-      <NavBar/>
       <Articles />
       <footer className="footer-mainp">GO MY CODE </footer>
       </div>
