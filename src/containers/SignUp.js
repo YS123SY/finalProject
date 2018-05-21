@@ -8,7 +8,7 @@ class SignUp extends React.Component {
     this.state = {
       name: "",
       email: "",
-      Image: "",
+      image: "",
       password: "",
       confirme: ""
     };
@@ -31,9 +31,9 @@ class SignUp extends React.Component {
     });
   };
   onChangeImage = event => {
-    const Image = event.target.value;
+    const image = event.target.value;
     this.setState({
-      Image
+      image
     });
   };
   onChangePassword = event => {
@@ -78,7 +78,7 @@ class SignUp extends React.Component {
             <span className="span-signIn">Image</span>
             <input
               type="holderspace"
-              value={this.state.img}
+              value={this.state.image}
               className="input"
               placeholder="Image Link"
               onChange={this.onChangeImage}
