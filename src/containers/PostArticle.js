@@ -7,20 +7,15 @@ class PostArticale extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      date: "",
       title: "",
       category: "",
-      Image: "",
-      content: ""
+      image: "",
+      paragh: ""
     };
   }
   addArticle = value => {
     axios.post("/post", { ...value });
-  };
-  onChangeTitle = event => {
-    const title = event.target.value;
-    this.setState({
-      title
-    });
   };
   onChangeCategory = event => {
     const category = event.target.value;
@@ -29,67 +24,92 @@ class PostArticale extends React.Component {
     });
   };
   onChangeImage = event => {
-    const Image = event.target.value;
+    const image = event.target.value;
     this.setState({
-      Image
+      image
     });
   };
-  onChangeContent = event => {
-    const content = event.target.value;
+  onChangeTitle = event => {
+    const title = event.target.value;
     this.setState({
-      content
+      title
+    });
+  };
+
+  onChangeDate = event => {
+    const date = event.target.value;
+    this.setState({
+      date
+    });
+  };
+  onChangeParagh = event => {
+    const paragh = event.target.value;
+    this.setState({
+      paragh
     });
   };
 
   render() {
     return (
-      <div className="sign-main">
-        <div className="sign-div">
-          <div className="input-div">
-            <span className="span-signIn">Articale title</span>
-            <input
-              type="holderspace"
-              value={this.state.title}
-              className="input"
-              placeholder="Title"
-              onChange={this.onChangeTitle}
-            />
-          </div>
+      <div>
+        <div className="sign-main">
+          <div className="sign-div">
+            <div className="input-div">
+              <span className="span-signIn">Article Category</span>
+              <input
+                type="holderspace"
+                value={this.state.category}
+                className="input"
+                placeholder="Category"
+                onChange={this.onChangeCategory}
+              />
+            </div>
 
-          <div className="input-div">
-            <span className="span-signIn">Artical Category</span>
-            <input
-              type="holderspace"
-              value={this.state.category}
-              className="input"
-              placeholder="Category"
-              onChange={this.onChangeCategory}
-            />
-          </div>
+            <div className="input-div">
+              <span className="span-signIn">Article Image</span>
+              <input
+                type="holderspace"
+                value={this.state.image}
+                className="input"
+                placeholder="Image Link"
+                onChange={this.onChangeImage}
+              />
+            </div>
 
-          <div className="input-div">
-            <span className="span-signIn">Image</span>
-            <input
-              type="holderspace"
-              value={this.state.img}
-              className="input"
-              placeholder="Image Link"
-              onChange={this.onChangeImage}
-            />
-          </div>
+            <div className="input-div">
+              <span className="span-signIn">Article title</span>
+              <input
+                type="holderspace"
+                value={this.state.title}
+                className="input"
+                placeholder="Title"
+                onChange={this.onChangeTitle}
+              />
+            </div>
 
-          <div className="input-div">
-            <span className="span-signIn">Artical Content</span>
-            <textarea
-              className="inputText"
-              rows="10"
-              cols="20"
-              value={this.state.content}
-              placeholder="Content"
-              onChange={this.onChangeContent}
-            />
-          </div>
+            <div className="input-div">
+              <span className="span-signIn">Article Date</span>
+              <input
+                type="holderspace"
+                value={this.state.date}
+                className="input"
+                placeholder="Date"
+                onChange={this.onChangeDate}
+              />
+            </div>
 
+            <div className="input-div">
+              <span className="span-signIn">Artical Paragh</span>
+              <textarea
+                className="inputText"
+                rows="10"
+                cols="20"
+                value={this.state.paragh}
+                placeholder="Content"
+                onChange={this.onChangeParagh}
+              />
+            </div>
+          </div>
           <div className="submit-div">
             <button
               className="btn-create"
