@@ -5,6 +5,7 @@ import Login from "./containers/Login";
 import PostArticle from "./containers/PostArticle";
 import Article from "./containers/Article";
 import SignUp from "./containers/SignUp";
+import User from "./containers/User";
 
 class Routes extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class Routes extends React.Component {
           path="/article/:id"
           render={props => <Article id={props} />}
         />
+        <Route exact path="/user/:id" render={props => <User id={props} />} />
       </div>
     );
   }
