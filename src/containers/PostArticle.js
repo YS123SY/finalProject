@@ -109,14 +109,15 @@ class PostArticale extends React.Component {
                 onChange={this.onChangeParagh}
               />
             </div>
-          </div>
-          <div className="submit-div">
-            <button
-              className="btn-create"
-              onClick={() => this.addArticle(this.state)}
-            >
-              Submit
-            </button>
+
+            <div className="submit-div">
+              <button
+                className="btn-create"
+                onClick={() => this.addArticle(this.state)}
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       </div>
