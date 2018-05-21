@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from "axios";
 import "../style/SignUp.css";
 
 class SignUp extends React.Component {
@@ -13,6 +13,11 @@ class SignUp extends React.Component {
       confirme: ""
     };
   }
+
+  addUser = user => {
+    axios.post("/signup", { ...user });
+  };
+
   onChangeName = event => {
     const name = event.target.value;
     this.setState({
@@ -102,7 +107,12 @@ class SignUp extends React.Component {
           </div>
 
           <div className="submit-div">
-            <button className="btn-create">Submit</button>
+            <button
+              className="btn-create"
+              onClick={() => this.addUser(this.state)}
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

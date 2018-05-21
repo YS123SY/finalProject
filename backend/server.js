@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const mongo_url = "mongodb://localhost:27017";
-const database = "articles"; 
+const database = "articles-blog";
 
 MongoClient.connect(mongo_url, (err, client) => {
   assert.equal(null, err, "data-base error");
@@ -15,17 +15,28 @@ MongoClient.connect(mongo_url, (err, client) => {
   const db = client.db(database);
 
   app.post("/post", (req, res) => {
-    let new_article = req.body;
-    db.collection("arc").insertOne({ ...new_article }, (err, data) => {
+    let new_articles = req.body;
+    db.collection("arc").insertOne({ ...new_articles }, (err, data) => {
       if (err) {
         res.send("cant add the new article");
       } else {
-        res.send("article added ");
+        res.send(data);
       }
     });
   });
 
-  app.get("/", (req, res) => {
+  app.post("/signup", (req, res) => {
+    let new_user = req.body;
+    db.collection("users").insertOne({ ...new_user }, (err, data) => {
+      if (err) {
+        res.send("cant add the new user");
+      } else {
+        res.send("user added ");
+      }
+    });
+  });
+
+  app.get("/articles", (req, res) => {
     db
       .collection("arc")
       .find()
@@ -34,7 +45,7 @@ MongoClient.connect(mongo_url, (err, client) => {
       });
   });
 
-  app.get("/:id", (req, res) => {
+  app.get("/articles/:id", (req, res) => {
     const id = ObjectID(req.params.id);
     db.collection("arc").findOne({ _id: id }, (err, data) => {
       if (err) {

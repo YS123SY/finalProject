@@ -11,10 +11,14 @@ class Routes extends React.Component {
     return (
       <div>
         <Route exact path="/" component={HomePage} />
-        <Route path="/login" component={Login} />
-        <Route path="/signUp" component={SignUp} />
-        <Route path="/post" component={PostArticle} />
-        <Route path="/article" component={Article} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signUp" component={SignUp} />
+        <Route exact path="/post" component={PostArticle} />
+        <Route
+          exact
+          path="/article/:id"
+          render={props => <Article id={props} />}
+        />
       </div>
     );
   }

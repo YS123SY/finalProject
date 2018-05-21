@@ -37,7 +37,7 @@ class Login extends React.Component {
             />
           </div>
 
-          <span>Password</span>
+          <span className="spanDiv">Password</span>
           <div>
             <input
               className="input-div"
@@ -49,8 +49,7 @@ class Login extends React.Component {
           <div className="submit-div">
             <input type="button" value="Submit" />
             <Link to="/signUp">
-              {" "}
-              <span>create one</span>
+              <span className="create">create one</span>
             </Link>
           </div>
         </div>

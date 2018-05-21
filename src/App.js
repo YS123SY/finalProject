@@ -8,22 +8,22 @@ import reducers from "./redux/reducers";
 
 import "./App.css";
 
-import Routes from "./Routes"
-import Navbar from './containers/NavBar'
+import Routes from "./Routes";
+import Navbar from "./containers/NavBar";
+import Footer from "./containers/Footer";
 
 class App extends Component {
   render() {
     const store = createStore(reducers);
 
     return (
-      <Provider store={store}>
-        <Router>  
+      <Router>
         <div>
-          <Navbar/>
-          <Routes/> 
-        </div> 
-        </Router>
-      </Provider>
+          <Navbar />
+          <Routes />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }

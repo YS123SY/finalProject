@@ -18,9 +18,18 @@ body {
 .articale {
   margin: 10px;
 }
-footer {
+.footer-mainp {
   height: 50px;
   background-color: rgba(115, 115, 200, 0.4);
   color: azure;
-  font-size: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  padding-top: 8px;
+}
+.article-parag {
+  color: azure;
+  size: 5px;
+  text-justify: newspaper;
+  text-align: center;
 }
