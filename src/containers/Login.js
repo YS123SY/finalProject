@@ -25,31 +25,34 @@ class Login extends React.Component {
   };
   render() {
     return (
-      <div className="login-main">
-        <div className="login-div">
-          <span className="spanDiv">E-mail</span>
-          <div>
+      <div className="losign-main">
+        <div className="losign-div">
+          <div className="loinput-div">
+            <span className="lospan-signIn">E-mail</span>
             <input
-              className="input-div"
               type="holderspace"
               value={this.state.email}
+              className="input"
+              placeholder="E-mail"
               onChange={this.onChangeEmail}
             />
           </div>
 
-          <span className="spanDiv">Password</span>
-          <div>
+          <div className="loinput-div">
+            <span className="lospan-signIn">password</span>
             <input
-              className="input-div"
               type="holderspace"
               value={this.state.password}
+              className="input"
+              placeholder="Password"
               onChange={this.onChangePassword}
             />
           </div>
-          <div className="submit-div">
-            <input type="button" value="Submit" />
+
+          <div className="losubmit-div">
+            <input className="lobtn-create" type="button" value="Submit" />
             <Link to="/signUp">
-              <span className="create">create one</span>
+              <span className="locreate">create one</span>
             </Link>
           </div>
         </div>
