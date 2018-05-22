@@ -21,6 +21,7 @@ class Routes extends React.Component {
           path="/article/:id"
           render={props => <Article id={props} />}
         />
+        <Route exact path="/user/:id" render={props => <User id={props} />} />
       </div>
     );
   }
