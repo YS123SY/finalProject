@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { connect } from "react-redux";
+import {addUser} from "../redux/actions/ArticalesActions"
+
 import "../style/SignUp.css";
 
 class SignUp extends React.Component {
@@ -14,8 +17,9 @@ class SignUp extends React.Component {
     };
   }
 
-  addUser = user => {
+  addNewUser = user => {
     axios.post("/signup", { ...user });
+    this.props.addUser({...user})
   };
 
   onChangeName = event => {
@@ -109,7 +113,7 @@ class SignUp extends React.Component {
           <div className="submit-div">
             <button
               className="btn-create"
-              onClick={() => this.addUser(this.state)}
+              onClick={() => this.addNewUser(this.state)}
             >
               Submit
             </button>
@@ -119,4 +123,19 @@ class SignUp extends React.Component {
     );
   }
 }
-export default SignUp;
+
+const mapStateToProps = state => {
+  const users = state.users
+  return {
+    users
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    addUser: user => {
+      dispatch(addUser(user));
+    }
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+

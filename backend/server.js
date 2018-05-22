@@ -44,6 +44,14 @@ MongoClient.connect(mongo_url, (err, client) => {
         res.send(data);
       });
   });
+  app.get("/login", (req, res) => {
+    db
+      .collection("users")
+      .find()
+      .toArray((err, data) => {
+        res.send(data);
+      });
+  });
 
   app.get("/articles/:id", (req, res) => {
     const id = ObjectID(req.params.id);

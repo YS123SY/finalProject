@@ -65,3 +65,11 @@
   margin-top: 20px;
   margin-left: 50px;
 }
+.error{
+  width:69%;
+  background-color: orangered;
+  text-align:center
+}
+.span{
+  color: white
+}

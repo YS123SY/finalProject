@@ -17,6 +17,7 @@ class App extends Component {
     const store = createStore(reducers);
 
     return (
+      <Provider store={store}>
       <Router>
         <div>
           <Navbar />
@@ -24,6 +25,7 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
+      </Provider>
     );
   }
 }

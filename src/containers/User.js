@@ -19,7 +19,6 @@ class User extends React.Component {
     );
   };
   render() {
-    console.log(this.props.id.match.params.id);
     return (
       <div>
         <p className="article-parag"> {this.state.paragh} </p>
